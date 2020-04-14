@@ -1,9 +1,12 @@
+'''
+пример загрузки изображения и создания сообщения с ним на стену
+'''
 import vk_api
 import datetime
-
+from auth_data import VK_USER, VK_PASS
 
 def main():
-    login, password = LOGIN, PASSWORD
+    login, password = VK_USER, VK_PASS
     vk_session = vk_api.VkApi(login, password)
     try:
         vk_session.auth(token_only=True)
